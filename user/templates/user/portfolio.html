@@ -1,0 +1,46 @@
+<!-- user/templates/user/portfolio.html -->
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block title %}Portfolio - Poartalz{% endblock %}
+
+{% block content %}
+<main id="portfolio">
+    <div class="container">
+        <!-- Portfolio Header Section -->
+        <section class="portfolio-header">
+            <h1>Our Portfolio</h1>
+            <p>Explore our success stories and see how we’ve empowered businesses with cutting-edge technology solutions.</p>
+        </section>
+
+        <!-- Project Showcase Section -->
+        <section class="project-showcase">
+            <div class="project-card">
+                <img src="{% static 'images/project1.jpg' %}" alt="E-commerce Platform">
+                <h3>E-commerce Platform for ABC Ltd.</h3>
+                <p>Developed a scalable e-commerce platform with seamless payment integration.</p>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'images/project2.jpg' %}" alt="Healthcare App">
+                <h3>Healthcare App for XYZ Healthcare</h3>
+                <p>Created a secure mobile application for appointment booking and telemedicine.</p>
+                <a href="#" class="btn">View More</a>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'images/project3.jpg' %}" alt="Cloud Migration">
+                <h3>Cloud Migration for LMN Corp.</h3>
+                <p>Seamlessly migrated legacy systems to AWS cloud with enhanced security.</p>
+                <a href="#" class="btn">View More</a>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="cta">
+            <h2>Interested in working with us?</h2>
+            <p>Let’s bring your vision to life. Contact us today!</p>
+            <a href="/contact-us/" class="btn">Get a Free Consultation</a>
+        </section>
+    </div>
+</main>
+{% endblock %}

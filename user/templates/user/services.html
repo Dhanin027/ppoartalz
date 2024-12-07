@@ -1,0 +1,56 @@
+<!-- user/templates/user/services.html -->
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block title %}Our Services - Poartalz{% endblock %}
+
+{% block content %}
+<main id="services">
+    <div class="container">
+        <!-- Services Header Section -->
+        <section class="services-header">
+            <h1>Our Services</h1>
+            <p>We offer a range of cutting-edge IT solutions designed to help businesses thrive in the digital age.</p>
+        </section>
+
+        <!-- Services List Section -->
+        <section class="services-list">
+            <div class="service-card">
+                <img src="{% static 'images/web_development_icon.png' %}" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>We create responsive websites tailored to your brand and audience.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'images/mobile_apps_icon.png' %}" alt="Mobile App Development">
+                <h3>Mobile App Development</h3>
+                <p>Build intuitive, user-friendly mobile applications for both iOS and Android platforms.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'images/cloud_solutions_icon.png' %}" alt="Cloud Solutions">
+                <h3>Cloud Solutions</h3>
+                <p>Leverage the power of the cloud to enhance scalability, security, and efficiency.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Experienced professionals with cutting-edge expertise.</li>
+                <li>Custom solutions tailored to your business needs.</li>
+                <li>Proven track record of delivering results.</li>
+            </ul>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="cta">
+            <h2>Looking for expert IT solutions?</h2>
+            <p>Let’s bring your ideas to life. Contact us today!</p>
+            <a href="/contact-us/" class="btn">Get a Free Consultation</a>
+        </section>
+    </div>
+</main>
+{% endblock %}

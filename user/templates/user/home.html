@@ -1,0 +1,62 @@
+<!-- user/templates/user/home.html -->
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block title %}Home - Poartalz{% endblock %}
+
+{% block content %}
+<main id="home">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Innovative IT Solutions for Your Business Growth</h1>
+                <p>Transforming ideas into reality with cutting-edge technology.</p>
+                <a href="/contact-us/" class="btn">Get a Free Consultation</a>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section class="services">
+            <h2>Our Core Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="{% static 'images/web_development.png' %}" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>Responsive websites tailored to your brand.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/mobile_apps.png' %}" alt="Mobile Applications">
+                    <h3>Mobile Apps</h3>
+                    <p>User-friendly apps for all platforms.</p>
+                </div>
+                <div class="service-item">
+                    <img src="{% static 'images/cloud_solutions.png' %}" alt="Cloud Solutions">
+                    <h3>Cloud Solutions</h3>
+                    <p>Seamless cloud integration and deployment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-item">
+                <p>"Working with Poartalz transformed our business. Their solutions are innovative and reliable!"</p>
+                <h4>- Client A</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Poartalz’s expertise in IT has been invaluable to our growth and success."</p>
+                <h4>- Client B</h4>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="cta">
+            <h2>Ready to Elevate Your Business?</h2>
+            <p>Contact us today to learn how we can help your business grow with innovative IT solutions.</p>
+            <a href="/contact-us/" class="btn">Contact Us</a>
+        </section>
+    </div>
+</main>
+{% endblock %}

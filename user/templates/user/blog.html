@@ -1,0 +1,57 @@
+<!-- user/templates/user/blog.html -->
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block title %}Blog - Poartalz{% endblock %}
+
+{% block content %}
+<main id="blog">
+    <div class="container">
+        <!-- Blog Header Section -->
+        <section class="blog-header">
+            <h1>Blog</h1>
+            <p>Explore insights, trends, and tips in technology and innovation.</p>
+        </section>
+
+        <!-- Featured Blog Section -->
+        <section class="featured-blog">
+            <h2>Featured Blog</h2>
+            <div class="blog-post">
+                <img src="{% static 'images/featured_blog.jpg' %}" alt="Featured Blog">
+                <h3>Top IT Trends to Watch in 2024</h3>
+                <p>Explore the cutting-edge trends shaping the future of technology.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <!-- Blog List Section -->
+        <section class="blog-list">
+            <div class="blog-post">
+                <img src="{% static 'images/blog1.jpg' %}" alt="Blog Post 1">
+                <h3>How Cloud Computing Transforms Small Businesses</h3>
+                <p>Learn how cloud solutions can drive efficiency and scalability.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="{% static 'images/blog2.jpg' %}" alt="Blog Post 2">
+                <h3>Cybersecurity Tips for Startups</h3>
+                <p>Discover essential practices to keep your business secure.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="{% static 'images/blog3.jpg' %}" alt="Blog Post 3">
+                <h3>The Role of Artificial Intelligence in Business</h3>
+                <p>Understanding how AI can streamline business processes.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="cta">
+            <h2>Stay Updated</h2>
+            <p>Get the latest trends and insights delivered to your inbox.</p>
+            <a href="/contact-us/" class="btn">Subscribe Now</a>
+        </section>
+    </div>
+</main>
+{% endblock %}

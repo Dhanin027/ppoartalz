@@ -1,0 +1,65 @@
+<!-- user/templates/user/about_us.html -->
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Poartalz{% endblock %}
+
+{% block content %}
+<main id="about-us">
+    <div class="container">
+        <!-- About Us Header Section -->
+        <section class="about-header">
+            <h1>About Us</h1>
+            <p>We are a team of passionate IT professionals committed to delivering innovative solutions that drive business growth.</p>
+        </section>
+
+        <!-- Mission, Vision, and Values Section -->
+        <section class="mission-vision-values">
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is to help businesses embrace technology and innovation to reach their full potential.</p>
+            </div>
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>We aim to be the leading provider of IT solutions that empower organizations across various industries.</p>
+            </div>
+            <div class="values">
+                <h2>Our Values</h2>
+                <ul>
+                    <p>Innovation<br>
+                    Excellence<br>
+                    Integrity<br>
+                    Customer Focus<br></p>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Team Members Section -->
+        <section class="team-members">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <img src="{% static 'images/team1.jpg' %}" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/team2.jpg' %}" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Chief Technology Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/team3.jpg' %}" alt="Team Member 3">
+                <h3>Michael Johnson</h3>
+                <p>Lead Developer</p>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="cta">
+            <h2>Interested in working with us?</h2>
+            <p>Let’s discuss how we can help your business grow with our IT solutions.</p>
+            <a href="/contact-us/" class="btn">Contact Us</a>
+        </section>
+    </div>
+</main>
+{% endblock %}
