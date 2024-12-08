@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +24,9 @@ INSTALLED_APPS = [
     'user',  # The app created for your Poartalz project
 ]
 
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -39,8 +42,10 @@ ROOT_URLCONF = 'poartalz.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Global templates folder
-        'APP_DIRS': True,
+        'DIRS': [
+            BASE_DIR / 'templates',  # Look for templates in the project-wide templates directory
+        ],
+        'APP_DIRS': True,  # Look in each app's templates directory
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -51,6 +56,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'poartalz.wsgi.application'
 
@@ -110,8 +116,11 @@ LOGOUT_REDIRECT_URL = '/login/'
 CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
 
-# Debugging with Django Debug Toolbar (optional, for development)
-# INSTALLED_APPS += ['debug_toolbar']
-# MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
-# INTERNAL_IPS = ['127.0.0.1']
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Use TLS
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'poartalzz@gmail.com'
+EMAIL_HOST_PASSWORD = 'rctiiumnfpiodjuf' 
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
